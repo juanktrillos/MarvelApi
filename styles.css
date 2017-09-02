@@ -1,0 +1,192 @@
+body{
+	font-family: sans-serif;
+	background-color: #420e10;
+	scroll-behavior: smooth;
+}
+body header{
+	background-color: #0e2141;
+}
+body img{
+	width: 100%;
+	/*! overflow: hidden; */
+}
+body .marvelImg.show{
+    height: auto;
+}
+body .marvelImg.hidden{
+	/* Initially we don't want any height, and we want the contents to be hidden */
+	max-height: 0;
+	overflow: hidden;
+
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+body .marvelSearch{
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0 0 0;
+}
+body .marvelSearch .search{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	padding: 1rem 1rem 0.5rem 1rem;
+	background-color: #420e10;
+	border-radius: 16px 16px 0px 0px;
+}
+body .marvelSearch .search input.searchText{
+    /*! width: 100%; */
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    /*! background-color: white; */
+    background-image: url('searchicon.png');
+    background-position: 10px 5px; 
+    background-size: 26px;
+    background-repeat: no-repeat;
+    padding: 0.5rem 3rem;
+	width: 80%;
+}
+body .marvelSearch .search .searchButton{
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem;
+	margin: 0 1rem;
+	width: 7rem;
+	cursor: pointer;
+	background-color: #631c12;
+	border-radius: 8px;
+	box-shadow: 2px 8px 15px #290b06;
+	color: white;
+	border: none;
+}
+body .marvelSearch .search .searchButton.hidden{
+	display: none;
+}
+body .marvelSearch .search .cleanButton{
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem;
+	margin: 0 1rem;
+	width: 7rem;
+	cursor: pointer;
+	background-color: #0e2141;
+	border-radius: 8px;
+	box-shadow: 2px 8px 15px #290b06;
+	color: white;
+	border: none;
+}
+body .marvelSearch .search .cleanButton:hover{
+	background-color: #081326;
+}	
+body .marvelSearch .search .cleanButton.hidden{
+	display: none;
+}
+body .marvelSearch .search .searchButton:hover{
+	box-shadow: 2px 2px 6px #290b06;
+	background-color: #44120b;
+}
+body .marvelData{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*! width: 100%; */
+	background-color: #0e2141;
+	margin: 1rem 0 0 0;
+	color: white;
+	padding: 1rem;
+	border-radius: 4px;
+}
+body .marvelData .characterImg{
+	width: 30%;
+	overflow: hidden;
+}
+body .marvelData .characterImg img{
+	border-radius: 4px;
+}
+body .marvelData .characterContent{
+	width: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+body .marvelData .characterContent .characterName{
+	width: 40%;
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 2rem;
+}
+body .marvelData .characterContent .characterSummary{
+	width: 80%;
+	text-align: justify;
+	padding-bottom: 3rem;
+	font-size: 1.5rem;
+}
+body .top{
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	padding: 2em;
+	z-index: 1;
+	background-color: rgba(63, 56, 56, 0.3);
+	background-image: url('up.png');
+	background-size: 4rem;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+}
+body .top:hover{
+	background-color: #8676764d;
+}
+
+@media screen and (max-width: 800px) {
+
+	body .marvelSearch .search{
+		transition: all 1s;
+		flex-direction: column;	
+	}
+	body .marvelSearch .search input.searchText{
+		transition: all 1s;
+	    font-size: 0.75em;
+	}
+  body .marvelSearch .search .searchButton{
+  		transition: all 1s;
+  		margin: 1rem 0;	
+	}
+  body .marvelSearch .search .cleanButton{
+  		transition: all 1s;
+  		margin: 1rem 0;	
+	}
+	body .marvelData{
+		transition: all 1s;
+		flex-direction: column;
+	}
+	body .marvelData .characterImg{
+		transition: all 1s;
+		width: 70%;
+	}
+	body .marvelData .characterContent .characterName{
+		transition: all 1s;
+		width: 70%;
+		font-size: 2rem;
+  }
+	body .marvelData .characterContent .characterSummary{
+		transition: all 1s;
+		width: 100%;
+		font-size: 1.2rem;
+  }
+	body .top{
+		transition: all 1s;
+		bottom: 15px;
+		right: 15px;
+		padding: 1.5rem;
+		background-size: 3rem;
+	}
